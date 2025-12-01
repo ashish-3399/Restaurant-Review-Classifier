@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Sentiment AI - Premium Analysis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-effects">
+    <div class="gradient-1"></div>
+    <div class="gradient-2"></div>
+  </div>
+
+  <main class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-wrapper">
+          <div class="logo">🍽️</div>
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="main-title">Restaurant Sentiment AI</h1>
+        <p class="tagline">Intelligent Sentiment Analysis & Aspect Extraction</p>
+      </div>
+    </header>
+
+    <!-- Input Section -->
+    <section class="input-section">
+      <div class="input-wrapper">
+        <div class="input-label">Share Your Experience</div>
+        <textarea 
+          id="reviewInput" 
+          class="review-input" 
+          placeholder="Paste your restaurant review here... 📝"
+          spellcheck="true"
+        ></textarea>
+        <div class="button-group">
+          <button id="predictBtn" class="btn btn-primary">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-label">Analyze Now</span>
+            <span class="btn-ripple"></span>
+          </button>
+          <button id="clearBtn" class="btn btn-ghost">
+            <span class="btn-label">Clear</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultCard" class="results-section hidden">
+      <div class="results-wrapper">
+        <!-- Sentiment Score -->
+        <div class="sentiment-card">
+          <div class="score-header">Analysis Result</div>
+          <div class="sentiment-badge" id="sentimentBadge">
+            <span id="sentimentText" class="sentiment-text">Positive</span>
+          </div>
+        </div>
+
+        <!-- Aspects Grid -->
+        <div class="aspects-section">
+          <div class="section-header">
+            <span class="section-icon">📊</span>
+            <span class="section-title">Key Aspects</span>
+          </div>
+          <div id="aspects" class="aspects-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
